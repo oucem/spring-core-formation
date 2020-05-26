@@ -1,0 +1,25 @@
+[filesystem "Oracle Corporation|11.0.4|/dev/disk1s1"]
+	timestampResolution = 15000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[alias]
+	l = log --graph --pretty=format:'%C(red bold)%h%C(cyan)%d%Creset | %s %Cgreen(%ar) %C(yellow)<%an>%Creset'
+	pfwl = push --force-with-lease
+	pv = "remote prune origin; branch -vv "
+	pv = "remote prune origin; branch -vv "
+[remote "origin"]
+	prune = true
+[pull]
+	rebase = merges
+[user]
+	name = Rabhi Houcem
+	email = hrebhi.prestataire@oui.sncf
+[core]
+	excludesfile = /Users/houssem_rebhi/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/houssem_rebhi/.stCommitMsg
