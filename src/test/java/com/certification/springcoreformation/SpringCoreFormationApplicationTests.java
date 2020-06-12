@@ -10,12 +10,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 class SpringCoreFormationApplicationTests {
 
     @Autowired
-    AnnotationConfigApplicationContext appCtx;
+    ApplicationContext appCtx;
 
     @Test
     void contextLoads() {
         for (String bean:appCtx.getBeanDefinitionNames()) {
             System.err.println(bean);
         }
+        System.err.println(appCtx.getClass().descriptorString());
     }
 }
